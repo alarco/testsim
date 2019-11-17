@@ -1,3 +1,11 @@
+#Script para el análisis de datos de RNAseq de E.coli
+#Previamente se ha tenido que preparar el ambiente en conda, 
+#instalar los programas fastqc, seqtk, cutadapt, STAR, multiqc
+
+# Download the E.coli genome in the $WD/res/genome
+wget -p $WD/res/genome -o ecoli.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
+
+
 if [ "$#" -eq 1 ]
 then
     sampleid=$1
