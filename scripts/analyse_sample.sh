@@ -5,6 +5,10 @@
 # Download the E.coli genome in the $WD/res/genome
 wget -p $WD/res/genome -o ecoli.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
 
+#Creación de los directorios necesarios para el analisis.
+mkdir -p out/fastqc original res/genome/star_index out/cutadapt log/cutadapt
+
+
 
 if [ "$#" -eq 1 ]
 then
